@@ -1,6 +1,5 @@
 import React from "react";
 import SlideContainer from "./components/SlideContainer";
-import SlidePage from "./components/SlidePage";
 import styled from "@emotion/styled";
 
 const App = () => {

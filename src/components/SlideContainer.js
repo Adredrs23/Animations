@@ -1,9 +1,32 @@
 import styled from "@emotion/styled";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SlidePage from "./SlidePage";
 
 const SlideContainer = () => {
 	const [slide, setSlide] = useState(0);
+
+	useEffect(() => {
+		const scrollDirection = (event) => {
+			if (event.deltaY < 0) {
+				console.log("scrolling up");
+				setSlide((prev) => (prev + 1) % 3);
+			} else if (event.deltaY > 0) {
+				console.log("scrolling down");
+				setSlide((prev) => {
+					if (prev === 0) {
+						return 2;
+					} else {
+						return (prev - 1) % 3;
+					}
+				});
+			}
+		};
+		window.addEventListener("wheel", scrollDirection);
+		return () => {
+			window.removeEventListener("wheel", scrollDirection);
+		};
+	});
+
 	console.log("slide state", slide);
 	return (
 		<StyledSlideContainer>
