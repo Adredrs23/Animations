@@ -30,35 +30,26 @@ const SlideContainer = () => {
 	console.log("slide state", slide);
 	return (
 		<StyledSlideContainer>
-			<button
-				style={{ position: "absolute", zIndex: 50 }}
-				onClick={() => {
-					console.log("clicked");
-					setSlide((prev) => (prev + 1) % 3);
-				}}
-			>
-				Next
-			</button>
 			<SlidePage
-				title='Title 1 '
-				subTitle='Lorem ipsum dolor sit amet.'
-				link='Learn More'
+				title='The new Breed of Exchange '
+				subTitle='lorem ainsdnan nkandnanlsnd naln a'
+				link='Learn More1'
 				visibleOnScrollCount={1}
 				currentSlide={slide}
 				slideId={0}
 			/>
 			<SlidePage
-				title='Title 2'
-				subTitle='Lorem ipsum dolor sit amet.'
-				link='Learn More'
+				title='Liquidity works well in here'
+				subTitle='asnidnlakn lan lan lawnd anuwnl na.'
+				link='Learn More2'
 				visibleOnScrollCount={2}
 				currentSlide={slide}
 				slideId={1}
 			/>
 			<SlidePage
 				title='Title 3'
-				subTitle='Lorem ipsum dolor sit amet.'
-				link='Learn More'
+				subTitle='aisndl nal slnaldsn lanjsl'
+				link='Learn More3'
 				visibleOnScrollCount={3}
 				currentSlide={slide}
 				slideId={2}
